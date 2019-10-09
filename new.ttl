@@ -1,0 +1,16 @@
+<http://www.txample.com/people/voc/Person/1>
+  a     <http://www.txample.com/people/voc/Person> ;
+  <http://www.txample.com/people/voc/Person/NAME>
+          "ALEX " ;
+  <http://www.txample.com/people/voc/Person/AGE>
+          "21" ;
+  <http://www.txample.com/people/voc/Person/LOCATION>
+        "DUBLIN" .
+<http://www.txample.com/people/voc/Person/2>
+  a     <http://www.txample.com/people/voc/Person> ;
+  <http://www.txample.com/people/voc/Person/NAME>
+          "ALEX " ;
+  <http://www.txample.com/people/voc/Person/AGE>
+          "21" ;
+  <http://www.txample.com/people/voc/Person/LOCATION>
+        "DUBLIN" .
