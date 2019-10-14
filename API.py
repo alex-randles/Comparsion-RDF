@@ -5,8 +5,6 @@ from compare_files import compare_files
 import os
 import rdflib
 
-
-
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -15,7 +13,6 @@ file_counter = 0
 app.config["allowed_file_extensions"] = ["csv", "xls"]
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 file_name = ""
-
 
 
 class API:

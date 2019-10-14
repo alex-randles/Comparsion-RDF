@@ -5,16 +5,16 @@ import sys
 def compare_files(file_1, file_2):
     g = rdflib.graph.ConjunctiveGraph()
     # ... add some triples to g somehow ...
-    g.parse(file_2, file_1, format='n3')
+    g.parse(file_1, file_2, format='n3')
     query_result = g.query(
         """
-            SELECT DISTINCT ?S
-                WHERE { GRAPH <old.ttl>
-                {?S ?P ?O }
-                FILTER NOT EXISTS
-                { GRAPH <new.ttl>
-                {?S ?P ?O}
-                }}
+             SELECT * 
+             FROM NAMED <old.ttl>
+             FROM <new.ttl>
+             WHERE{
+                 ?S ?P ?O
+                 GRAPH <new.ttl> {?S1 ?P1 ?O1}
+             }
            """)
     for row in query_result:
         print(row)
